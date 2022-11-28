@@ -12,8 +12,8 @@ class Home extends BaseController
 
     public function login() {
         //preluam datele din front
-        $username = $_POST['username'];
-        $password = $_POST['password'];
+        $username = $this->request->getPost('username');
+        $password = $this->request->getPost('password');
 
         //conectare la baza de date
         $db = db_connect();
@@ -46,8 +46,8 @@ class Home extends BaseController
     }
 
     public function saveUser() {
-        $username = $_POST['username'];
-        $password = $_POST['password'];
+        $username = $this->request->getPost('username');
+        $password = $this->request->getPost('password');
 
         //conectare la baza de date
         $db = db_connect();
@@ -71,8 +71,8 @@ class Home extends BaseController
     }
 
     public function recuperareUser() {
-        $username = $_POST['username'];
-        $password = $_POST['password'];
+         $username = $this->request->getPost('username');
+        $password = $this->request->getPost('password');
          //conectare la baza de date
          $db = db_connect();
 
